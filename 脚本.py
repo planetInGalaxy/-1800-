@@ -4,10 +4,9 @@
 # %%
 import pandas as pd
 import numpy as np
-from pathlib import Path
 
 # %%
-data = pd.read_excel(Path('.\in\data-20230322.xlsx'))
+data = pd.read_excel('./in/data-20230322.xlsx')
 data
 
 # %%
@@ -30,10 +29,10 @@ pd.value_counts(Ytrain)
 pd.value_counts(Ytest)
 
 # %%
-Xtrain.to_excel(Path(".\out\Xtrain0.xlsx"))
-Xtest.to_excel(Path(".\out\Xtest0.xlsx"))
-pd.DataFrame(Ytrain).to_excel(Path(".\out\Ytrain0.xlsx"))
-pd.DataFrame(Ytest).to_excel(Path(".\out\Ytest0.xlsx"))
+Xtrain.to_excel("./out/Xtrain0.xlsx")
+Xtest.to_excel("./out/Xtest0.xlsx")
+pd.DataFrame(Ytrain).to_excel("./out/Ytrain0.xlsx")
+pd.DataFrame(Ytest).to_excel("./out/Ytest0.xlsx"))
 
 # %%
 #恢复索引
@@ -44,19 +43,19 @@ for i in [Ytrain, Ytest]:
     i.index = range(i.shape[0])
 
 # %%
-Xtrain.to_excel(Path(".\out\Xtrain.xlsx"))
-Xtest.to_excel(Path(".\out\Xtest.xlsx"))
-Ytrain.to_excel(Path(".\out\Ytrain.xlsx"))
-Ytest.to_excel(Path(".\out\Ytest.xlsx"))
+Xtrain.to_excel("./out/Xtrain.xlsx")
+Xtest.to_excel("./out/Xtest.xlsx")
+Ytrain.to_excel("./out/Ytrain.xlsx")
+Ytest.to_excel("./out/Ytest.xlsx")
 
 # %% [markdown]
 # # 建模输入
 
 # %%
-Xtrainmodel = pd.read_excel(Path(".\in\Xtrainmodel.xlsx"))
+Xtrainmodel = pd.read_excel("./in/Xtrainmodel.xlsx")
 
 # %%
-Xtestmodel = pd.read_excel(Path(".\in\Xtestmodel.xlsx"))
+Xtestmodel = pd.read_excel("./in/Xtestmodel.xlsx")
 
 # %%
 Xtrainmodel = Xtrainmodel.fillna(0)
