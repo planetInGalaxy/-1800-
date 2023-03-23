@@ -32,7 +32,7 @@ pd.value_counts(Ytest)
 Xtrain.to_excel("./out/Xtrain0.xlsx")
 Xtest.to_excel("./out/Xtest0.xlsx")
 pd.DataFrame(Ytrain).to_excel("./out/Ytrain0.xlsx")
-pd.DataFrame(Ytest).to_excel("./out/Ytest0.xlsx"))
+pd.DataFrame(Ytest).to_excel("./out/Ytest0.xlsx")
 
 # %%
 #恢复索引
